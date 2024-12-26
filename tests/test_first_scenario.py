@@ -1,10 +1,11 @@
 from pages.sbis_contacts_page import ContactsPage
 from pages.tensor_main_page import TensorMainPage
 from pages.tensor_about_page import TensorAboutPage
+from utilities.config import Config
 
 
 def test_can_go_to_the_tensor_site(browser):
-    url = 'https://sbis.ru/contacts'
+    url = f"{Config.BASE_URL}/contacts"
     sbis_contacts_page = ContactsPage(browser, url)
     sbis_contacts_page.open_site()
     sbis_contacts_page.click_on_the_banner()
