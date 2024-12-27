@@ -2,3 +2,4 @@ tensor-env/
 .pytest_cache/
 __pycache__/
 ttt.py
+sbisplugin-setup-web.exe

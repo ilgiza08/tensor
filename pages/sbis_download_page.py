@@ -3,10 +3,10 @@ from selenium.webdriver.common.by import By
 import urllib.request
 import os
 
+
 class SbisDownloadPageLocators():
     LOCATOR_SBIS_DOWNLOAD_LINK = (By.XPATH, '//h3[text()="Веб-установщик "]/../following-sibling::div//a')
-    # //h3[text()="Веб-установщик "]/../following-sibling::div//a - link download
-
+    
 
 class SbisDownloadPage(BasePage):
 

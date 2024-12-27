@@ -5,7 +5,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class SbisMainPageLocators():
     LOCATOR_SBIS_MAIN_DOWNLOAD = (By.CSS_SELECTOR, '[href="/download"]')
-    # //h3[text()="Веб-установщик "]/../following-sibling::div//a - link download
 
 
 class SbisMainPage(BasePage):
