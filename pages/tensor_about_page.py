@@ -23,6 +23,6 @@ class TensorAboutPage(BasePage):
                 img_params.append(width)
                 img_params.append(height)
             else: 
-                assert img_params == [width, height], "Images sizes are not the same"
+                assert img_params == [width, height], "Images sizes are not the same. "
 
 
