@@ -34,22 +34,18 @@ class ContactsPage(BasePage):
         kamchatka = self.find_element(SbisContactsPageLocators.LOCATOR_SBIS_CONTACTS_KAMCHATKA)
         ActionChains(self.browser).scroll_to_element(kamchatka).perform()
         kamchatka.click()
-        time.sleep(10)
+        time.sleep(5)
         new_region = self.find_element(SbisContactsPageLocators.LOCATOR_SBIS_CONTACTS_MY_REGION).text
-        #assert new_region == "Камчатский край", 'not kamchatka'
         check.equal(new_region, "Камчатский край")
 
-        #partners = self.find_element(SbisContactsPageLocators.LOCATOR_SBIS_CONTACTS_PARTNERS_SITY).text
-        #check.equal(partners, "Петропавловск-Камчатский")
-        #print("проверка партнеров")
+        partners = self.find_element(SbisContactsPageLocators.LOCATOR_SBIS_CONTACTS_PARTNERS_SITY).text
+        check.equal(partners, "Петропавловск-Камчатский")
 #
-        #current_url = self.browser.current_url
-        #check.is_in("kamchatskij", current_url)
-        #print("проверка урла")
+        current_url = self.browser.current_url
+        check.is_in("kamchatskij", current_url)
 #
-        #title = self.browser.title
-        #check.is_in("Камчатский край", title)
-        #print("проверка тайтла")
+        title = self.browser.title
+        check.is_in("Камчатский край", title)
 
 
         
